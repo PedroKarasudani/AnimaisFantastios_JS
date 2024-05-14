@@ -11,12 +11,16 @@ export default function initFetchAnimais() {
   }
 
   async function initAsync(url) {
-    const animaisResponse = fetch(url);
-    const animaisJSON = await (await animaisResponse).json();
+    try {
+      const animaisResponse = fetch(url);
+      const animaisJSON = await (await animaisResponse).json();
 
-    animaisJSON.forEach((animal) => {
-      createAnimal(animal);
-    });
+      animaisJSON.forEach((animal) => {
+        createAnimal(animal);
+      });
+    } catch (error) {
+      console.log(error);
+    }
   }
   initAsync("./animais.json");
 }
