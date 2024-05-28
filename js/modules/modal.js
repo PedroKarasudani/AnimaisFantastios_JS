@@ -26,6 +26,7 @@ export default class initModal {
     if (event.target === this.containerModal) {
       this.eventToggleModal(event);
     }
+    return this;
   }
 
   init() {
