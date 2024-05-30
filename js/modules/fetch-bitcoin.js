@@ -1,4 +1,5 @@
 export default function initFetchBitcoin() {
+  console.log("teste");
   const spanPreco = document.querySelector(".btc-preco");
 
   fetch("https://www.blockchain.com/pt/ticker")
