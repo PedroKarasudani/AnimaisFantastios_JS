@@ -16,11 +16,6 @@ export default class initFuncionamento {
     this.dataAtual = new Date();
     this.diaAtual = this.dataAtual.getDay();
     this.horarioAtual = this.dataAtual.getUTCHours() - 3 + 24;
-    console.log(
-      this.horarioAtual,
-      this.horarioSemana[0],
-      this.horarioSemana[1]
-    );
   }
 
   estaAberto() {
@@ -32,7 +27,6 @@ export default class initFuncionamento {
   }
 
   ativaAberto() {
-    console.log(this.estaAberto());
     if (this.estaAberto()) {
       this.funcionamento.classList.add(this.activeClass);
     }
