@@ -7,6 +7,7 @@ import Tooltip from "./modules/tooltip.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
 import MenuMobile from "./modules/menu-mobile.js";
 import Funcionamento from "./modules/funcionamento.js";
+import SlideNav from "./modules/slide.js";
 import fetchAnimais from "./modules/fetch-animais.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
 
@@ -47,6 +48,11 @@ menuMobile.init();
 
 const funcionamento = new Funcionamento("[data-semana]", "aberto");
 funcionamento.init();
+
+const slide = new SlideNav(".slide", ".slide-wrapper");
+slide.init();
+slide.addControl(".custom-controls");
+
 
 // import $ from "jquery";
 
