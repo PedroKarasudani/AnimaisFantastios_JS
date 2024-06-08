@@ -7,13 +7,14 @@ export default class MenuMobile {
 
     this.activeClass = "active";
 
-    if (events === undefined) this.events = ["click", "touchstart"];
+    if (events === undefined) this.events = ["touchstart", "click"];
     else this.events = events;
 
     this.openMenu = this.openMenu.bind(this);
   }
 
-  openMenu() {
+  openMenu(event) {
+    event.preventDefault();
     this.menuButton.classList.add(this.activeClass);
     this.menuList.classList.add(this.activeClass);
 

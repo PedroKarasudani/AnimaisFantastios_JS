@@ -53,7 +53,6 @@ const slide = new SlideNav(".slide", ".slide-wrapper");
 slide.init();
 slide.addControl(".custom-controls");
 
-
 // import $ from "jquery";
 
 // import _ from "lodash";
